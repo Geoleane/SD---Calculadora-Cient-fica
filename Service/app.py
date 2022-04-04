@@ -44,7 +44,7 @@ def divisao():
         
     return jsonify(result)       
 
-@app.route('/multiplicao')
+@app.route('/multiplicacao')
 def multiplicacao():
     v1 = request.args.get('valor1')
     v2 = request.args.get('valor2')
