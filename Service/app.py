@@ -22,7 +22,7 @@ def soma():
         
     return jsonify(result)
 
-@app.route('/subtrai')
+@app.route('/subtracao')
 def subtracao():
     v1 = request.args.get('valor1')
     v2 = request.args.get('valor2')
@@ -33,7 +33,7 @@ def subtracao():
         
     return jsonify(result)
 
-@app.route('/divide')
+@app.route('/divisao')
 def divisao():
     v1 = request.args.get('valor1')
     v2 = request.args.get('valor2')
@@ -44,7 +44,7 @@ def divisao():
         
     return jsonify(result)       
 
-@app.route('/multiplica')
+@app.route('/multiplicao')
 def multiplicacao():
     v1 = request.args.get('valor1')
     v2 = request.args.get('valor2')
@@ -68,19 +68,23 @@ def expoente():
 
 @app.route('/raiz')
 def raiz():
-    v = request.args.get('valor')
+    v1 = request.args.get('valor1')
+    v2 = request.args.get('valor2')
 
-    valor = int(v)
-    result = m.sqrt(valor)
+    valor1 = int(v1)
+    valor2 = int(v2)
+    result = m.sqrt(valor1)
         
     return jsonify(result) 
 
 @app.route('/fatorial')
 def fatorial():
-    v = request.args.get('valor')
+    v1 = request.args.get('valor1')
+    v2 = request.args.get('valor2')
 
-    valor = int(v)
-    result = m.factorial(valor)
+    valor1 = int(v1)
+    valor2 = int(v2)
+    result = m.factorial(valor1)
         
     return jsonify(result) 
 
@@ -97,28 +101,34 @@ def log():
 
 @app.route('/seno')
 def seno():
-    v = request.args.get('valor')
+    v1 = request.args.get('valor1')
+    v2 = request.args.get('valor2')
 
-    valor = int(v)
-    result = m.sin(valor)
+    valor1 = int(v1)
+    valor2 = int(v2)
+    result = m.sin(valor1)
         
     return jsonify(result) 
 
 @app.route('/cosseno')
 def cosseno():
-    v = request.args.get('valor')
+    v1 = request.args.get('valor1')
+    v2 = request.args.get('valor2')
 
-    valor = int(v)
-    result = m.cos(valor)
+    valor1 = int(v1)
+    valor2 = int(v2)
+    result = m.cos(valor1)
         
     return jsonify(result) 
 
 @app.route('/tangente')
 def tangente():
-    v = request.args.get('valor')
+    v1 = request.args.get('valor1')
+    v2 = request.args.get('valor2')
 
-    valor = int(v)
-    result = m.tan(valor)
+    valor1 = int(v1)
+    valor2 = int(v2)
+    result = m.tan(valor1)
         
     return jsonify(result) 
 
